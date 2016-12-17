@@ -1,0 +1,30 @@
+<h2>Login</h2>
+<form novalidate class="row">
+    <div class="col-lg-4">
+        social media login
+    </div>
+    <div class="col-lg-8">
+        <ul class="has-error list-unstyled" ng-show="loginError || signUpError">
+            <li ng-repeat="error in formError">
+                <div class="table-bordered">{{error.code}}</div>
+                <div class="table-bordered">{{error.message}}</div>
+            </li>
+        </ul>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" class="form-control" ng-model="user.email"/>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" class="form-control" ng-model="user.password"/>
+        </div>
+        <div class="form-group row">
+            <div class="col-lg-6">
+                <button class="glyphicon-log-in" type="submit" ng-click="loginUser(user)">LOGIN</button>
+            </div>
+            <div class="col-lg-6">
+                <button class="glyphicon-log-in" type="submit" ng-click="signUp(user)">SIGNUP</button>
+            </div>
+        </div>
+    </div>
+</form>
